@@ -1,0 +1,52 @@
+import './TodoListItem.css';
+
+import React from 'react';
+
+class ToDoListItem extends React.Component {
+  render() {
+    const {
+      label,
+      onDeleteTask,
+      onToggleImportant,
+      onToggleDone,
+      done,
+      important,
+    } = this.props;
+
+    let classNames = "todo-list-item d-grid";
+
+    if (done) {
+      classNames += " done";
+    }
+    if (important) {
+      classNames += " mark";
+    }
+
+    return (
+      <>
+        <div className={classNames}>
+          <span className="todo-list-label" onClick={onToggleImportant}>
+            {label}
+          </span>
+          <button
+            type="button"
+            className="btn btn-outline-success btn-sm float-right"
+            onClick={onToggleDone}
+          >
+            <i className="fa fa-exclamation" />
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-danger btn-sm float-right"
+            onClick={onDeleteTask}
+          >
+            <i className="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </div>
+      </>
+    );
+  }
+}
+
+export default ToDoListItem;
+// onClick={onDeleteLi}   ========  onDeleteLi

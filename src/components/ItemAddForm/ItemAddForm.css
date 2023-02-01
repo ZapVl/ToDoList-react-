@@ -1,0 +1,35 @@
+.todo-list-item {
+  font-size: 1.25rem;
+  grid-template-columns: 2fr 0.3fr 0.3fr;
+
+}
+
+.todo-list-item button {
+  width: 35px;
+  margin: 3px;
+}
+
+.todo-list-item-label {
+  margin-left: 1.25rem;
+  line-height: 35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.todo-list-item.done .todo-list-item-label {
+  text-decoration: line-through;
+}
+
+.todo-list-item.important .todo-list-item-label {
+  font-weight: bold;
+  color: steelblue;
+}
+
+.ItemAddForm {
+  grid-template-columns: 9.5fr 2.5fr;
+  margin-top: 20px;
+}
+
+.ItemAddForm button {
+  margin-left: 3px;
+}
