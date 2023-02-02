@@ -109,6 +109,7 @@ export default class App extends Component {
     const todoCount = todoDate.length - todoDone;
     const visibleItems = this.filter(this.search(todoDate, term), filter);
     return (
+      <div className='container'>
       <div className="todo-app">
         <AppHeader todoCount={todoCount} todoDone={todoDone} />
         <div className="normalize">
@@ -125,6 +126,7 @@ export default class App extends Component {
           onToggleDone={this.onToggleDone}
         />
         <ItemAddForm onAddTaskTodo={this.addTaskTodo} />
+      </div>
       </div>
     );
   }

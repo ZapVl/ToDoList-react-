@@ -6,6 +6,7 @@ export default class ItemAddForm extends Component {
   state = {
     label: "",
   };
+  
   chengeLabel = (e) => {
     this.setState({
       label: e.target.value,
@@ -13,10 +14,14 @@ export default class ItemAddForm extends Component {
   };
   addTask = (e) => {
     e.preventDefault();
-    this.props.onAddTaskTodo(this.state.label);
+    if(this.state.label === ''){
+      console.log('empty')
+      }else{
+        this.props.onAddTaskTodo(this.state.label);
     this.setState({
       label: "",
     });
+    }
   };
   render() {
     return (

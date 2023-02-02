@@ -9,7 +9,7 @@ const AppHeader = (props) => {
       <h2>
         {" "}
         Done:{props.todoDone} <br />
-        in anticipation:{props.todoCount}
+        in progress:{props.todoCount}
       </h2>
     </div>
   );

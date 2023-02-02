@@ -21,6 +21,7 @@ class ToDoListItem extends React.Component {
     if (important) {
       classNames += " mark";
     }
+    
 
     return (
       <>
@@ -33,14 +34,15 @@ class ToDoListItem extends React.Component {
             className="btn btn-outline-success btn-sm float-right"
             onClick={onToggleDone}
           >
-            <i className="fa fa-exclamation" />
+          &#33;
           </button>
           <button
             type="button"
             className="btn btn-outline-danger btn-sm float-right"
             onClick={onDeleteTask}
           >
-            <i className="fa fa-trash" aria-hidden="true"></i>
+           	
+&#128465;
           </button>
         </div>
       </>
