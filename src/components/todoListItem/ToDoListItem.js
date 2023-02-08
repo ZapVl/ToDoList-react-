@@ -34,7 +34,7 @@ class ToDoListItem extends React.Component {
             className="btn btn-outline-success btn-sm float-right"
             onClick={onToggleDone}
           >
-          &#33;
+         ✓
           </button>
           <button
             type="button"
@@ -42,7 +42,7 @@ class ToDoListItem extends React.Component {
             onClick={onDeleteTask}
           >
            	
-&#128465;
+🗑
           </button>
         </div>
       </>
